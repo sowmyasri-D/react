@@ -6,7 +6,18 @@
   height: 40vmin;
   pointer-events: none;
 }
+.nav a{
+  text-decoration: none;
+  margin-right: 25%;
+  color:gold;
 
+}
+
+.nav{
+  margin-bottom: 1%;
+  background-color: black;
+  font-size: 30px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

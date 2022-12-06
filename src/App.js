@@ -1,14 +1,29 @@
 //import ClassComponent from './Class Component'
-import FuncProps from  './FuncProps'
+/*import FuncProps from  './FuncProps'
 import StateExample from './StateExample'
 import DemoExample from './DemoExample'
 import Events from './Events'
-import JSX from './JSX'
-
+import JSX from './JSX'*/
+import Home from './Components/Home'
+import About from './Components/About'
+import Contact from './Components/Contact'
+import {BrowserRouter,Routes,Route}from 'react-router-dom'
+import Navbar from './Components/Navbar'
+import NotFound from './Components/NotFound'
 function App(){
   return(
       <div>
-      <StateExample/>
+         <BrowserRouter>
+         <Navbar/>
+         <Routes>
+           <Route path="/" element={<Home/>}/>
+           <Route path="/about" element={<About/>}/>
+           <Route path="/contact"element={<Contact/>}/>
+           <Route path="*"element={<NotFound/>}/>
+           </Routes>
+           </BrowserRouter>
+
+      {/*<StateExample/>
      { /*<JSX/>
       <DemoExample price="1st price"/>
       <Events/>
